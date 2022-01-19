@@ -1,1 +1,1 @@
-Run this script and it will go through all subdirectories, fixing Artist and Title tags for OGG audio files (.ogg) when they are located in the same folder as a StepMania file (.sm)
+Run this script and provide it a folder. It will go through all subdirectories of the folder, fixing Artist and Title tags for OGG audio files (.ogg) when they are located in the same folder as a StepMania file (.sm).

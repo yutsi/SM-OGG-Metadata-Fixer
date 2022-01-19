@@ -1,14 +1,7 @@
-import os
+import sys, os
 import glob
 import re
 from mutagen.oggvorbis import OggVorbis    # for editing OGG metadata
-
-def setpath():
-    global path
-    script_path = os.path.abspath(__file__)    # obtain script's current path
-    path_list = script_path.split(os.sep)   # split path
-    script_path = path_list[0:len(path_list)-1]    # remove script file from path
-    path = "\\".join(script_path) + "\\"    # reformat path
 
 def oggfix():
     smpathlist = i.split(os.sep)
@@ -27,7 +20,9 @@ def oggfix():
             print("Artist tag added to " + re.split('\\\\', j)[-1])
 
 def main():
-    setpath()
+    path = input("Enter the directory of the files to fix.")
+    path = path.replace(os.sep, "\\")      # replace forward slashes
+    path = os.path.join(path, '')       # add trailing slash if it is not there
     global i
     for i in glob.glob(glob.escape(path) + "**/*.sm", recursive=True):  # loop through all SM files in script folder or subdirectories
         global artistLine, titleLine

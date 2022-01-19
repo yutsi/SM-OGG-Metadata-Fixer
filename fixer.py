@@ -1,4 +1,4 @@
-import sys, os
+import os
 import glob
 import re
 from mutagen.oggvorbis import OggVorbis    # for editing OGG metadata

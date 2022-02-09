@@ -1,1 +1,0 @@
-Run this script and provide it a folder. It will go through all subdirectories of the folder, fixing Artist and Title tags for OGG audio files (.ogg) when they are located in the same folder as a StepMania file (.sm). This uses the Mutagen module with Python 3.
